@@ -13,6 +13,7 @@ public class Rifle : MonoBehaviour
     public Animator animator;
     public PlayerScript player;
     public Transform hand;
+    public GameObject rifleUI;
 
     [Header("Rifle Ammunation and Shooting")]
     private int maximumAmmunition = 32;
@@ -24,9 +25,11 @@ public class Rifle : MonoBehaviour
     [Header("Rifle Effects")]
     public ParticleSystem muzzleSpark;
     public GameObject WoodenEffect;
+    public GameObject goreEffect;
 
     private void Awake() {
         transform.SetParent(hand);
+        rifleUI.SetActive(true);
         presentAmmunition = maximumAmmunition;
     }
 
@@ -43,22 +46,26 @@ public class Rifle : MonoBehaviour
         if(Input.GetButton("Fire1") && Time.time >= nextTimeToShoot){
             animator.SetBool("Fire", true);
             animator.SetBool("Idle", false);
+            animator.SetBool("Punch", false);
             nextTimeToShoot = Time.time + 1f/fireCharge;
             Shoot();
 
         } else if(Input.GetButton("Fire1") && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
             animator.SetBool("Idle", false);
             animator.SetBool("FireWalk", true);
+            animator.SetBool("Punch", false);
 
         } else if(Input.GetButton("Fire2") && Input.GetButton("Fire1")) {
             animator.SetBool("Idle", false);
             animator.SetBool("IdleAim", true);
+            animator.SetBool("Punch", false);
             animator.SetBool("FireWalk", true);
             animator.SetBool("Walk", true);
             animator.SetBool("Reloading", false);
 
         } else {
             animator.SetBool("Fire", false);
+            animator.SetBool("Punch", false);
             animator.SetBool("Idle", true);
             animator.SetBool("FireWalk", false); 
             
@@ -79,6 +86,8 @@ public class Rifle : MonoBehaviour
         }
 
         //updating the UI
+        AmmoCount.occurrence.UpdateAmmoText(presentAmmunition);
+        AmmoCount.occurrence.UpdateMagText(mag);
 
         muzzleSpark.Play();
         RaycastHit hitInfo;
@@ -87,11 +96,24 @@ public class Rifle : MonoBehaviour
             Debug.Log(hitInfo.transform.name);
 
             ObjectToHit objectToHit = hitInfo.transform.GetComponent<ObjectToHit>();
+            Zombie1 zombie1 = hitInfo.transform.GetComponent<Zombie1>();
+            Zombie2 zombie2 = hitInfo.transform.GetComponent<Zombie2>();
 
             if(objectToHit != null) {
                 objectToHit.ObjectHitDamage(giveDamageOf);
                 GameObject WoodGo = Instantiate(WoodenEffect, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
                 Destroy(WoodGo, 1f);
+
+            } else if(zombie1 != null) {
+
+                zombie1.zombieHitDamage(giveDamageOf);
+                GameObject goreEffectGo = Instantiate(goreEffect, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+                Destroy(goreEffectGo, 1f);
+            } else if(zombie2 != null) {
+
+                zombie2.zombieHitDamage(giveDamageOf);
+                GameObject goreEffectGo = Instantiate(goreEffect, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
+                Destroy(goreEffectGo, 1f);
             }
         }
     }

@@ -8,8 +8,15 @@ public class PlayerScript : MonoBehaviour
     public float playerSpeed = 1.9f;
     public float playerSprint = 3f;
 
+    [Header("Player Health Things")]
+    private float playerHealth = 120f;
+    public float presentHealth;
+    public GameObject playerDamage;
+    public HealthBar healthBar;
+
     [Header("Player Script cameras")]
     public Transform playerCamera;
+    public GameObject EndGameMenuUI;
 
     [Header("Player Animator and Gravity")]
     public CharacterController cC;
@@ -26,11 +33,20 @@ public class PlayerScript : MonoBehaviour
     public float surfaceDistance = 0.4f;
     public LayerMask surfaceMask;
 
+    [Header("Asset Managment")]
+    public GameObject ShortGun;
+    public GameObject AugGun;
+
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
+        presentHealth = playerHealth;
+        healthBar.GiveFullHealth(playerHealth);
     }
 
     private void Update() {
+
+        ShortGun.SetActive(AssetsCheck.ShortGun);
+        AugGun.SetActive(AssetsCheck.AugGun);
 
         onSurface = Physics.CheckSphere(surfaceCheck.position, surfaceDistance, surfaceMask);
 
@@ -110,5 +126,28 @@ public class PlayerScript : MonoBehaviour
             animator.SetBool("Running", false);
         }
         }
+    }
+
+    public void playerHitDamage(float takeDamage) {
+        presentHealth -= takeDamage;
+        StartCoroutine(PlayerDamage());
+
+        healthBar.SetHealth(presentHealth);
+
+        if(presentHealth <= 0) {
+            PlayerDie();
+        }
+    }
+
+    private void PlayerDie() {
+        EndGameMenuUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Object.Destroy(gameObject, 1.0f);
+    }
+
+    IEnumerator PlayerDamage() {
+        playerDamage.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        playerDamage.SetActive(false);
     }
 }
