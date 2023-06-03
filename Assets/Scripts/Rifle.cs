@@ -16,7 +16,7 @@ public class Rifle : MonoBehaviour
     public GameObject rifleUI;
 
     [Header("Rifle Ammunation and Shooting")]
-    private int maximumAmmunition = 32;
+    public int maximumAmmunition = 32;
     public int mag = 10;
     private int presentAmmunition;
     public float reloadingTime = 1.3f;
@@ -26,6 +26,11 @@ public class Rifle : MonoBehaviour
     public ParticleSystem muzzleSpark;
     public GameObject WoodenEffect;
     public GameObject goreEffect;
+
+    [Header("Sounda and UI")]
+    public AudioClip shootingSound;
+    public AudioClip reloadingsound;
+    public AudioSource audioSource;
 
     private void Awake() {
         transform.SetParent(hand);
@@ -90,6 +95,7 @@ public class Rifle : MonoBehaviour
         AmmoCount.occurrence.UpdateMagText(mag);
 
         muzzleSpark.Play();
+        audioSource.PlayOneShot(shootingSound);
         RaycastHit hitInfo;
 
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hitInfo, shootingRange)){
@@ -126,6 +132,7 @@ public class Rifle : MonoBehaviour
         //play anim
         animator.SetBool("Reloading", true);
         //play reload sound
+        audioSource.PlayOneShot(reloadingsound);
         yield return new WaitForSeconds(reloadingTime);
         //play anim
         animator.SetBool("Reloading", false);

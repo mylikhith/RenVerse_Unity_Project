@@ -768,8 +768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 907}
+  m_AnchoredPosition: {x: 3, y: 0.214}
+  m_SizeDelta: {x: 2000, y: 1097.2815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82003068
 MonoBehaviour:
@@ -899,7 +899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -24.5621}
+  m_AnchoredPosition: {x: 0, y: -24.562256}
   m_SizeDelta: {x: 0, y: -297.8759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87904533
@@ -1183,7 +1183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 81.79999, y: 59}
+  m_AnchoredPosition: {x: 105, y: 70}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146834921
@@ -2037,8 +2037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 907}
+  m_AnchoredPosition: {x: 5, y: 2.628601}
+  m_SizeDelta: {x: 2001.7627, y: 1101.0142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412930175
 MonoBehaviour:
@@ -2810,7 +2810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 81.79999, y: 59}
+  m_AnchoredPosition: {x: 108, y: 74}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495903632
@@ -3673,7 +3673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1789, y: 59}
+  m_AnchoredPosition: {x: 1812.2, y: 70}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695796898
@@ -4123,6 +4123,7 @@ MonoBehaviour:
   userId: {fileID: 143343836}
   NftId: {fileID: 471911836}
   GameId: {fileID: 292577695}
+  errorHandler: {fileID: 0}
 --- !u!1 &833718440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,8 +4243,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 907}
+  m_AnchoredPosition: {x: 5.899, y: 0}
+  m_SizeDelta: {x: 2000, y: 1096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839346152
 MonoBehaviour:
@@ -4319,7 +4320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -56.101074}
+  m_AnchoredPosition: {x: 0, y: -72}
   m_SizeDelta: {x: 421, y: 28.2705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &862290542
@@ -4477,8 +4478,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4557,7 +4558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1789, y: 59}
+  m_AnchoredPosition: {x: 1798, y: 74}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892321987
@@ -4978,18 +4979,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ShotGun
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1708159894}
-        m_TargetAssemblyTypeName: AssetsCheck, Assembly-CSharp
-        m_MethodName: AssetUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &972269506
@@ -5813,7 +5802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -56.101074}
+  m_AnchoredPosition: {x: 0, y: -82}
   m_SizeDelta: {x: 421, y: 28.2705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1200079448
@@ -6208,7 +6197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 48.299988, y: 46}
+  m_AnchoredPosition: {x: 48.299988, y: 92}
   m_SizeDelta: {x: 160, y: 33.6548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338307217
@@ -6798,7 +6787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -24.5621}
+  m_AnchoredPosition: {x: 0, y: -24.562012}
   m_SizeDelta: {x: 0, y: -297.8759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432224490
@@ -6961,8 +6950,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -7856,8 +7845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.95080566, y: -0.25021362}
-  m_SizeDelta: {x: 607.2981, y: 379.2308}
+  m_AnchoredPosition: {x: 5.084778, y: 0.19320679}
+  m_SizeDelta: {x: 959.8376, y: 486.8694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662505939
 MonoBehaviour:
@@ -8185,7 +8174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -813, y: -34}
+  m_AnchoredPosition: {x: -813, y: -102}
   m_SizeDelta: {x: 129.2967, y: 26.056488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746822859
@@ -8265,7 +8254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 48.3, y: -27}
+  m_AnchoredPosition: {x: 48.3, y: -95}
   m_SizeDelta: {x: 557.4753, y: 47.806396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760850352
@@ -8877,18 +8866,6 @@ MonoBehaviour:
           m_StringArgument: AugGun
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 462863518}
-        m_TargetAssemblyTypeName: AssetsCheck, Assembly-CSharp
-        m_MethodName: AssetUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1810366699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8965,8 +8942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00096893, y: -0.000030518}
-  m_SizeDelta: {x: 743.5, y: 485.5}
+  m_AnchoredPosition: {x: 5.899475, y: 0}
+  m_SizeDelta: {x: 956.5, y: 485.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827290617
 MonoBehaviour:
@@ -8984,6 +8961,7 @@ MonoBehaviour:
   Timer: {fileID: 631961634}
   LogInPanel: {fileID: 1827290615}
   CountdownPanel: {fileID: 2115241495}
+  errorHandler: {fileID: 0}
 --- !u!114 &1827290618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9748,18 +9726,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Shooter
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8766795863525137746}
-        m_TargetAssemblyTypeName: AssetsCheck, Assembly-CSharp
-        m_MethodName: AssetUpdate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1949492334

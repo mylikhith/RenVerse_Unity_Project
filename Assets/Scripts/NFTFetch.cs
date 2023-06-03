@@ -8,6 +8,8 @@ using UnityEngine.UI;
 using Rene.Sdk;
 using Rene.Sdk.Api.Game.Data;
 using ReneVerse;
+using Rene.Sdk.Api.User.Data;
+using Rene.Sdk.Api;
 
 public class NFTFetch : MonoBehaviour
 {
@@ -30,6 +32,7 @@ public class NFTFetch : MonoBehaviour
     public Text NftId;
     public Text GameId;
     public static string AssetName;
+    public ErrorHandler errorHandler;
 
     API ReneAPI;
 
@@ -52,7 +55,7 @@ public class NFTFetch : MonoBehaviour
 
         API reneApi = ReneAPIManager.API();
         AssetsResponse.AssetsData userAssets = await reneApi.Game().Assets();
-
+        
         GameId.text = userAssets.Items[0].GameId;
         foreach (var pair in ReneverseManager.UserAssets)
         {
@@ -147,10 +150,11 @@ public class NFTFetch : MonoBehaviour
             Debug.Log(Response);
             ReneverseManager.UserAssets[AssetName] = false;
             TrnasferMenu.SetActive(false);
-
+            errorHandler.ErrorMessage("Asset Transfered :)");
         }
         catch (System.Exception)
         {
+            errorHandler.ErrorMessage("Transfer Failed");
             Debug.Log("Transfer Failed");
         }
     }

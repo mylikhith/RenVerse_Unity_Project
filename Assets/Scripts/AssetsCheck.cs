@@ -31,7 +31,6 @@ public class AssetsCheck : MonoBehaviour
             {
                 mintbtn.SetActive(false);
                 selectbtn.SetActive(true);
-                Debug.Log("Change");
             }
         }
 
