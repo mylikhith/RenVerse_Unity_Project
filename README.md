@@ -34,5 +34,3 @@ Charachers
 ![Screenshot (303)](https://github.com/mylikhith/RenVerse_Unity_Project/assets/121515676/a5a23c4b-2c47-4210-955d-6f67c3495859)
 
 
-
-
